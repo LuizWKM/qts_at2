@@ -1,0 +1,30 @@
+[project]
+name = "qts-at2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "LuizWKM", email = "luizricardowm@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.162.2",
+    "pydantic>=2.14.3",
+]
+
+[project.scripts]
+qts-at2 = "qts_at2:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "axe-playwright-python>=0.1.8",
+    "faker>=40.52.0",
+    "locust>=2.47.0",
+    "pytest>=9.2.0",
+    "pytest-mock>=3.17.0",
+    "pytest-playwright>=0.10.0",
+]
